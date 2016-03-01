@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <SeekBar
+        android:id="@+id/sbstage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvaudience"
+        android:layout_below="@+id/tvaudience"
+        android:max="10"/>
+
+    <SeekBar
+        android:id="@+id/sbenergy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvonstage"
+        android:layout_below="@+id/tvonstage"
+        android:max="10" />
+
+    <TextView
+        android:id="@+id/tvstagepresence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvperformance"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="28dp"
+        android:text="•stage presence"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <SeekBar
+        android:id="@+id/sbperformance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvstagepresence"
+        android:layout_below="@+id/tvstagepresence" 
+        android:max="10"/>
+
+    <TextView
+        android:id="@+id/tvonstage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/sbperformance"
+        android:layout_below="@+id/sbperformance"
+        android:text="•energy on stage"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvperformance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvaudience"
+        android:layout_below="@+id/sbenergy"
+        android:text="•performance"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <SeekBar
+        android:id="@+id/sbaudience"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvperformance"
+        android:layout_below="@+id/tvperformance" 
+        android:max="10"/>
+
+    <TextView
+        android:id="@+id/tvaudience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/sbaudience"
+        android:layout_marginLeft="18dp"
+        android:text="•audience engagement"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/boverall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sbstage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="RATE" />
+
+</RelativeLayout>
